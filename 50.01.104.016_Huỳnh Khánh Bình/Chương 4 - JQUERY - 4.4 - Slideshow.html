@@ -1,0 +1,60 @@
+<header>
+    <h1 style="color:#00F;">GALLERY</h1>
+  </header>
+  <section>
+    <div class="slideshow">
+      <div class="slideshow inner">
+        <a href="c:\Users\ADMINI~1\AppData\Local\Temp\Rar$DIa5976.36749\porsche718_1.jpg">
+          <img src="c:\Users\ADMINI~1\AppData\Local\Temp\Rar$DIa5976.31699\porsche718_1.jpg" />
+        </a>
+        <a href="c:\Users\ADMINI~1\AppData\Local\Temp\Rar$DIa5976.47255\porsche718_2.jpg">
+          <img src="c:\Users\ADMINI~1\AppData\Local\Temp\Rar$DIa5976.190\porsche718_2.jpg" />
+        </a>
+        <a href="c:\Users\ADMINI~1\AppData\Local\Temp\Rar$DIa5976.2544\porsche718_3.jpg">
+          <img src="c:\Users\ADMINI~1\AppData\Local\Temp\Rar$DIa5976.4650\porsche718_3.jpg">
+        </a>
+        <a href="c:\Users\ADMINI~1\AppData\Local\Temp\Rar$DIa5976.6915\porsche718_4.jpg">
+          <img src="c:\Users\ADMINI~1\AppData\Local\Temp\Rar$DIa5976.8692\porsche718_4.jpg">
+        </a>
+        <a href="c:\Users\ADMINI~1\AppData\Local\Temp\Rar$DIa5976.10824\porsche718_5.jpg">
+          <img src="c:\Users\ADMINI~1\AppData\Local\Temp\Rar$DIa5976.12869\porsche718_5.jpg">
+        </a>
+      </div>
+    </div>
+    <div class="button">
+      <input type="button" id="btnLeft" name="btnLeft" value="<<" /> <input type="button" id="btnRight" name="btnRight" value=">>" />
+    </div>
+  </section>
+  <script src="jquery-3.7.0.min.js"></script>
+  <script>
+    var i = 10;
+    $(document).ready(function (e) {
+      $("#btnLeft").click(function (e) {
+        $(".slideshow_inner").animate({
+          marginLeft: i -= 250
+        }, 500);
+      });
+      $("#btnRight").click(function (e) {
+        $(".slideshow_inner").animate({
+          marginLeft: i += 250
+        }, 500);
+      });
+    });
+  </script>
+  <style>
+    h1, .slideshow, .button {
+      text-align: center;
+    }
+    img {
+      width: 180px; height: 150px;
+    }
+    body {
+      margin: 0px auto; width: 1000px;
+    }
+    .slideshow_inner {
+      margin-left: 10px; width: 1000px;
+    }
+    .slideshow {
+      width: 1000px; overflow: hidden;
+    }
+  </style>
